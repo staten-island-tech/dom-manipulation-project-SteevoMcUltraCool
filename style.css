@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+.rad {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    display: inline;
+}
