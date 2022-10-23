@@ -3,8 +3,10 @@ body {
 }
 
 .rad {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     padding: 5px;
-    display: inline;
+    margin: 0px 0px;    
+    bottom: 6px;
+    position: relative;
 }
