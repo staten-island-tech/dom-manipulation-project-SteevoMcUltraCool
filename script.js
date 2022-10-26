@@ -12,8 +12,13 @@ const DOM = {
   bmiTrue: document.getElementById("bmiTrue"),
 
   rr: document.getElementById("rr"),
+  roof: document.getElementById("roof"),
 };
-
+function playAudio() {
+  if (DOM.roof.pla)
+DOM.roof.play();
+}
+playAudio()
 function getRadioButtonValue(buttons) {
   for (i = 0; i < buttons.length, (i = i + 1); ) {
     console.log(buttons[i]);
