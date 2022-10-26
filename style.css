@@ -10,3 +10,7 @@ body {
     bottom: 6px;
     position: relative;
 }
+.noShow {
+    visibility: collapse;
+    display: none;
+}
