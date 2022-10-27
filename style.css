@@ -1,15 +1,19 @@
 body {
     text-align: center;
+    background-image: url("Plants_vs_Zombies_Level_5_7_Walkthrough_Adventure.gif");
+    background-size: cover;
+    background-position: auto auto;
 }
 
 .rad {
     display: inline-flex;
     flex-direction: column;
     padding: 5px;
-    margin: 0px 0px;    
+    margin: 0px 0px;
     bottom: 6px;
     position: relative;
 }
+
 .noShow {
     visibility: collapse;
     display: none;

@@ -14,11 +14,19 @@ const DOM = {
   rr: document.getElementById("rr"),
   roof: document.getElementById("roof"),
 };
+
+let playing = false
 function playAudio() {
-  if (DOM.roof.pla)
-DOM.roof.play();
+  console.log(playing)
+  if (!playing) {
+    DOM.roof.play();
+    playing = true
+  }
 }
-playAudio()
+  document.body.addEventListener('keydown', playAudio);
+  document.body.addEventListener('click', playAudio);
+  document.body.addEventListener('touchstart', playAudio);
+
 function getRadioButtonValue(buttons) {
   for (i = 0; i < buttons.length, (i = i + 1); ) {
     console.log(buttons[i]);
