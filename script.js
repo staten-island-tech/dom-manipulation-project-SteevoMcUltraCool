@@ -169,5 +169,5 @@ function fetchResults() {
       closestPlant = plants[k];
     }
   }
-  DOM.rr.innerHTML = `You ara a : ${closestPlant.name} with a ${closestScore}% similarity!`;
+  DOM.rr.innerHTML = `<h3>${closestPlant.name}</h3> <div class="split"><div class="theImg"></div><div class="text">Hello ${DOM.enterName.value}! You match up with a ${closestScore}% similarity. </div> </div>`;
 }
