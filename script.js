@@ -15,17 +15,17 @@ const DOM = {
   roof: document.getElementById("roof"),
 };
 
-let playing = false
+let playing = false;
 function playAudio() {
-  console.log(playing)
+  console.log(playing);
   if (!playing) {
     DOM.roof.play();
-    playing = true
+    playing = true;
   }
 }
-  document.body.addEventListener('keydown', playAudio);
-  document.body.addEventListener('click', playAudio);
-  document.body.addEventListener('touchstart', playAudio);
+document.body.addEventListener("keydown", playAudio);
+document.body.addEventListener("click", playAudio);
+document.body.addEventListener("touchstart", playAudio);
 
 function getRadioButtonValue(buttons) {
   for (i = 0; i < buttons.length, (i = i + 1); ) {
@@ -46,6 +46,10 @@ let plants = {
     hair: true,
     gpa: true,
     bmi: false,
+
+    img: "url(imgs/Sunflowa.gif)",
+    bio: `You are helpful and kind. You are smart, reserved, and enjoy helping others. You most likely enjoy reading and the simple things in life.`,
+    description: ``,
   },
   Peashooter: {
     name: "Peashooter",
@@ -57,6 +61,10 @@ let plants = {
     hair: true,
     gpa: true,
     bmi: false,
+
+    img: "url(imgs/pea.webp)",
+    bio: `Sometimes you help others, but oftentimes you are willing to go out on a limb and take a risk/ You are smart, athletic, and always ready for action.`,
+    description: ``,
   },
   WallNut: {
     name: "Wall-Nut",
@@ -68,6 +76,10 @@ let plants = {
     hair: true,
     gpa: false,
     bmi: true,
+
+    img: "url(imgs/WallNut.gif)",
+    bio: `Sometimes you help others, but oftentimes you are willing to go out on a limb and take a risk/ You are smart, athletic, and always ready for action.`,
+    description: ``,
   },
   HypnoShroom: {
     name: "Hypno-Shroom",
@@ -79,6 +91,10 @@ let plants = {
     hair: false,
     gpa: true,
     bmi: false,
+
+    img: "url(imgs/hypno.webp)",
+    bio: `You always try to see the good in people. You are a risk taker, but you also do what you can to help others in need.`,
+    description: ``,
   },
   PotatoMine: {
     name: "Potato-Mine",
@@ -90,17 +106,25 @@ let plants = {
     hair: false,
     gpa: true,
     bmi: false,
+
+    img: "url(imgs/PotMin.webp)",
+    bio: `SPUDOW! You have an EXPLOSIVE personality. You may be smart, but oftentimes, it gets overlooked by some of the stupid things you do.`,
+    description: ``,
   },
   BonkChoy: {
     name: "Bonk-Choy",
     height: 74,
-    secondChances: 2,
+    secondChances: 1,
     spontaneous: 4,
     helpful: 2,
 
     hair: false,
     gpa: false,
     bmi: false,
+
+    img: "url(imgs/Bonk.webp)",
+    bio: `You love to fight. You may be argumentative, but people understand where you are coming from. You aren't the brightest bulb in the box, however. `,
+    description: ``,
   },
 };
 
@@ -169,5 +193,13 @@ function fetchResults() {
       closestPlant = plants[k];
     }
   }
-  DOM.rr.innerHTML = `<h3>${closestPlant.name}</h3> <div class="split"><div class="theImg"></div><div class="text">Hello ${DOM.enterName.value}! You match up with a ${closestScore}% similarity. </div> </div>`;
+  DOM.rr.innerHTML = `
+  <h3>${closestPlant.name}</h3> 
+  <div class="split">
+  <div class="theImg" style="background-image:${closestPlant.img}"></div>
+  <div class="text">Hello ${DOM.enterName.value}! You match up with a ${closestScore}% similarity. ${closestPlant.bio} </div> 
+  </div>
+  <p>${closestPlant.description}</p>`;
+  DOM.rr.style.display = "block";
+  DOM.rr.style.visibility = "visible";
 }
