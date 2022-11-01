@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background-image: url("Plants_vs_Zombies_Level_5_7_Walkthrough_Adventure.gif");
-    /*background-image: linear-gradient(rgb(0,120,0),black, rgb(60,0,120));*/
+    background-image: linear-gradient(180deg, rgb(0,120,0), rgb(60,0,120));
     background-size: 100% 100%;
     background-position: auto auto;
 }
